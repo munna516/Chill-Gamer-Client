@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "Cyberpunk 2077: Phantom Liberty Update Revolutionizes Game",
+    "post_date": "2024-12-06",
+    "author": {
+      "name": "Jane Doe",
+      "profile_url": "https://i.ibb.co.com/p6qf1Cq/m1.jpg"
+    },
+    "image_url": "https://i.ibb.co.com/xY3SP4f/1.jpg",
+    "web": "https://gamerant.com/cyberpunk-2077-phantom-liberty-all-changes-cybernetics-skill-trees/"
+  },
+  {
+    "id": 2,
+    "title": "Nintendo Announces New Legend of Zelda Game for 2025",
+    "post_date": "2024-12-05",
+    "author": {
+      "name": "Maria sina",
+      "profile_url": "https://i.ibb.co.com/7YmrQXZ/woman.webp"
+    },
+    "image_url": "https://i.ibb.co.com/17WsRDk/2.jpg",
+    "web": "https://www.nintendo.com/au/news-and-articles/the-legend-of-zelda-echoes-of-wisdom-and-metroid-prime-4-beyond-for-nintendo-switch-unveiled-in-latest-nintendo-direct/?srsltid=AfmBOopcM8752aARvOE3hXOm4Z59jPFKeVDIwx77PT3AiDfx2UkSP7km"
+  },
+  {
+    "id": 3,
+    "title": "Elder Scrolls VI: Official Trailer Revealed at Game Awards",
+    "post_date": "2024-12-07",
+    "author": {
+      "name": "Emily Carter",
+      "profile_url": "https://i.ibb.co.com/kK9WXx8/m3.webp"
+    },
+    "image_url": "https://i.ibb.co.com/X8yRDXF/10.webp",
+    "web": "https://www.gamingbible.com/news/elder-scrolls-6-reveal-torn-972067-20241120"
+  },
+  {
+    "id": 4,
+    "title": "Epic Games Brings Back Fortnite OG Map Permanently",
+    "post_date": "2024-12-06",
+    "author": {
+      "name": "Mark Wilson",
+      "profile_url": "https://i.ibb.co.com/wSvGLH7/m4.jpg"
+    },
+    "image_url": "https://i.ibb.co.com/jMqchkw/4.jpg",
+    "web": "https://www.fortnite.com/news/fortnite-og-is-back-and-here-to-stay"
+  },
+  {
+    "id": 5,
+    "title": "Top Indie Games of 2024: A Year of Creativity and Innovation",
+    "post_date": "2024-12-05",
+    "author": {
+      "name": "Alice Johnson",
+      "profile_url": "https://i.ibb.co.com/9hzKGL6/m2.jpg"
+    },
+    "image_url": "https://i.ibb.co.com/FqpZy2M/3.jpg",
+    "web": "https://www.gs-studio.eu/blog/best-indie-games-of-2024-a-showcase-of-creativity-and-innovation"
+  }
+]
