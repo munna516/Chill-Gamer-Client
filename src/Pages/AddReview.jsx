@@ -25,7 +25,7 @@ const AddReview = () => {
       photo,
       description,
     };
-    fetch("https://chill-gamer-server-gold.vercel.app/reviews", {
+    fetch(`${import.meta.env.VITE_url}/reviews`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -26,8 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/reviews",
         element: <AllReview></AllReview>,
-        loader: () =>
-          fetch("https://chill-gamer-server-gold.vercel.app/reviews"),
+        loader: () => fetch(`${import.meta.env.VITE_url}/reviews`),
       },
       {
         path: "/addReview",
@@ -44,8 +43,7 @@ const router = createBrowserRouter([
             <MyReview></MyReview>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch("https://chill-gamer-server-gold.vercel.app/reviews"),
+        loader: () => fetch(`${import.meta.env.VITE_url}/reviews`),
       },
       {
         path: "/myWatchlist",
@@ -54,20 +52,13 @@ const router = createBrowserRouter([
             <GameWatchlist></GameWatchlist>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch("https://chill-gamer-server-gold.vercel.app/myWatchlist"),
+        loader: () => fetch(`${import.meta.env.VITE_url}/myWatchlist`),
       },
       {
         path: "/reviews/:id",
-        element: (
-          <PrivateRoute>
-            <ReviewDetails></ReviewDetails>
-          </PrivateRoute>
-        ),
+        element: <ReviewDetails></ReviewDetails>,
         loader: ({ params }) =>
-          fetch(
-            `https://chill-gamer-server-gold.vercel.app/reviews/${params.id}`
-          ),
+          fetch(`${import.meta.env.VITE_url}/reviews/${params.id}`),
       },
       {
         path: "/updateReview/:id",
@@ -77,9 +68,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://chill-gamer-server-gold.vercel.app/reviews/${params.id}`
-          ),
+          fetch(`${import.meta.env.VITE_url}/reviews/${params.id}`),
       },
       {
         path: "/login",

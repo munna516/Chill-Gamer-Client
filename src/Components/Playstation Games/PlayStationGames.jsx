@@ -13,7 +13,7 @@ const PlayStationGames = () => {
     if (user && user?.email) {
       const email = user?.email;
       const playlist = { email, game };
-      fetch("https://chill-gamer-server-gold.vercel.app/add-to-playlist", {
+      fetch(`${import.meta.env.VITE_url}/add-to-playlist`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

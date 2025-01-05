@@ -41,7 +41,7 @@ const UpdateReview = () => {
       description,
     };
 
-    fetch(`https://chill-gamer-server-gold.vercel.app/reviews/${_id}`, {
+    fetch(`${import.meta.env.VITE_url}/reviews/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

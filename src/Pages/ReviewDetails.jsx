@@ -34,7 +34,7 @@ const ReviewDetails = () => {
       photo,
       description,
     };
-    fetch("https://chill-gamer-server-gold.vercel.app/myWatchlist", {
+    fetch(`${import.meta.env.VITE_url}/myWatchlist`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

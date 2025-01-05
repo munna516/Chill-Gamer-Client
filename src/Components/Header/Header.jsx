@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+import toast from "react-hot-toast";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -24,6 +24,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut();
+    toast.success("Logout Successfull");
     navigate("/");
   };
   const links = (
@@ -122,7 +123,6 @@ const Header = () => {
             to="/"
             className="flex gap-2 items-center text-xl  lg:text-4xl text-[#6442fc] font-extrabold"
           >
-           
             Chill-Gamer
           </Link>
         </div>

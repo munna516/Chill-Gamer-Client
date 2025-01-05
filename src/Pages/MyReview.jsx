@@ -24,7 +24,7 @@ const MyReview = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://chill-gamer-server-gold.vercel.app/reviews/${id}`, {
+        fetch(`${import.meta.env.VITE_url}/reviews/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
