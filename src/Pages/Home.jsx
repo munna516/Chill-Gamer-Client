@@ -7,7 +7,7 @@ import PlayStationGames from "../Components/Playstation Games/PlayStationGames";
 const Home = () => {
   return (
     <div>
-      <Slider></Slider>
+      {/* <Slider></Slider> */}
       <HighestRatedGames></HighestRatedGames>
       <LatestNews></LatestNews>
       <PlayStationGames></PlayStationGames>

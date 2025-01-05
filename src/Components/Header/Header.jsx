@@ -1,7 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import useAuth from "../../Hooks/useAuth";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Header = () => {
     document.querySelector("html").setAttribute("data-theme", localTheme);
   }, [theme]);
 
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useAuth();
   const handleLogOut = () => {
     logOut();
     toast.success("Logout Successfull");
@@ -54,46 +54,50 @@ const Header = () => {
         All Review
       </NavLink>
 
-      {/* Add Review */}
-      <NavLink
-        className={({ isActive }) =>
-          `text-xl font-bold flex items-center gap-2 mr-5 ${
-            isActive ? "btn btn-primary text-white" : ""
-          }`
-        }
-        to="/addReview"
-      >
-        Add Review
-      </NavLink>
+      {user && (
+        <>
+          {/* Add Review */}
+          <NavLink
+            className={({ isActive }) =>
+              `text-xl font-bold flex items-center gap-2 mr-5 ${
+                isActive ? "btn btn-primary text-white" : ""
+              }`
+            }
+            to="/addReview"
+          >
+            Add Review
+          </NavLink>
 
-      {/* My Review */}
-      <NavLink
-        className={({ isActive }) =>
-          `text-xl font-bold flex items-center gap-2 mr-5 ${
-            isActive ? "btn btn-primary text-white" : ""
-          }`
-        }
-        to="/myReviews"
-      >
-        My Review
-      </NavLink>
+          {/* My Review */}
+          <NavLink
+            className={({ isActive }) =>
+              `text-xl font-bold flex items-center gap-2 mr-5 ${
+                isActive ? "btn btn-primary text-white" : ""
+              }`
+            }
+            to="/myReviews"
+          >
+            My Review
+          </NavLink>
 
-      {/* Game WWatchList */}
-      <NavLink
-        className={({ isActive }) =>
-          `text-xl font-bold flex items-center gap-2 mr-5 ${
-            isActive ? "btn btn-primary text-white" : ""
-          }`
-        }
-        to="/myWatchlist"
-      >
-        Game Watchlist
-      </NavLink>
+          {/* Game WWatchList */}
+          <NavLink
+            className={({ isActive }) =>
+              `text-xl font-bold flex items-center gap-2 mr-5 ${
+                isActive ? "btn btn-primary text-white" : ""
+              }`
+            }
+            to="/myWatchlist"
+          >
+            Game Watchlist
+          </NavLink>
+        </>
+      )}
     </>
   );
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar rounded-b-lg bg-slate-300 fixed  py-5 z-50 w-11/12 top-0 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -121,7 +125,7 @@ const Header = () => {
           </div>
           <Link
             to="/"
-            className="flex gap-2 items-center text-xl  lg:text-4xl text-[#6442fc] font-extrabold"
+            className="flex gap-2 items-center text-xl  lg:text-4xl  font-extrabold"
           >
             Chill-Gamer
           </Link>

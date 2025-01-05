@@ -6,9 +6,9 @@ import Footer from "../Components/Footer/Footer";
 const Root = () => {
   return (
     <>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-base-200">
 
-        <div className="w-11/12 mx-auto my-3">
+        <div className="w-11/12 mx-auto my-3 mb-16">
           <Header></Header>
         </div>
 
@@ -16,7 +16,7 @@ const Root = () => {
           <Outlet></Outlet>
         </div>
 
-        <div>
+        <div className="w-11/12 mx-auto">
           <Footer></Footer>
         </div>
         

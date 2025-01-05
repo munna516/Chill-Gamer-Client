@@ -8,7 +8,7 @@ const ReviewCard = ({ review }) => {
   return (
     <>
       <Roll  triggerOnce="true">
-        <div className="card card-compact bg-base-100 border-2  transition  hover:scale-105 shadow-xl rounded-xl overflow-hidden">
+        <div className="card card-compact bg-base-100 border-2 shadow-lg rounded-xl">
           <figure className="p-3">
             <img
               src={photo}
