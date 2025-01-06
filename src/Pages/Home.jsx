@@ -3,6 +3,7 @@ import HighestRatedGames from "../Components/HighestRatedGames/HighestRatedGames
 import LatestNews from "../Components/Latest News/LatestNews";
 import PlayStationGames from "../Components/Playstation Games/PlayStationGames";
 import Banner from "../Components/Banner/Banner";
+import NewsLetter from "../Components/NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
       <HighestRatedGames></HighestRatedGames>
       <PlayStationGames></PlayStationGames>
       <LatestNews></LatestNews>
-      
+      <NewsLetter></NewsLetter>
     </div>
   );
 };

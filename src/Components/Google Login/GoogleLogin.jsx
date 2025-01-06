@@ -24,13 +24,13 @@ const GoogleLogin = () => {
     <div>
       <div
         onClick={handleGoogleSignIn}
-        className="flex cursor-pointer items-center justify-center mt-4 text-gray-600  border rounded-lg   hover:bg-gray-200 "
+        className="flex cursor-pointer items-center justify-center mt-4 text-gray-600  border rounded-lg   hover:bg-gray-200  border-gray-400"
       >
         <div className="px-4 py-2 text-2xl">
           <FcGoogle />
         </div>
 
-        <span className="w-5/6 px-4 py-3 font-bold text-center">
+        <span className="w-5/6 px-4 py-3 text-primary font-bold text-center">
           Sign in with Google
         </span>
       </div>

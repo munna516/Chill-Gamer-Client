@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import RegistrationLottie from "../assets/Lottie/RegistrationLottie.json";
@@ -9,7 +9,7 @@ import useAuth from "../Hooks/useAuth";
 
 const Register = () => {
   const navigate = useNavigate();
-  const { createNewUser, setUser, updateUserProfile } = useAuth()
+  const { createNewUser, setUser, updateUserProfile } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -48,8 +48,8 @@ const Register = () => {
       });
   };
   return (
-    <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-8">
-      <div className="md:flex w-full  mx-auto overflow-hidden bg-white rounded-lg shadow-lg  lg:max-w-4xl ">
+    <div className="flex justify-center items-center min-h-[calc(100vh-306px)] my-16">
+      <div className="md:flex w-full  mx-auto overflow-hidden  rounded-lg shadow-lg  lg:max-w-4xl ">
         <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
           <p className="mt-3 text-xl text-center text-gray-600 ">
             Registration an Account
@@ -148,7 +148,7 @@ const Register = () => {
             <div className="mt-6">
               <button
                 type="submit"
-                className="btn btn-accent text-lg w-full text-white"
+                className="btn btn-primary text-lg w-full text-white"
               >
                 Register
               </button>

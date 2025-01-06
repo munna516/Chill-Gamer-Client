@@ -46,7 +46,7 @@ const AllReview = () => {
   };
   return (
     <>
-      <div className="text-center mt-3 md:mt-8 lg:mt-14 md:flex justify-evenly items-center">
+      <div className="text-center mt-3 md:mt-8 lg:mt-14 md:flex justify-evenly items-center ">
         <h1 className="text-2xl md:text-4xl font-bold text-primary ">
           All Reviews ({reviews.length})
         </h1>

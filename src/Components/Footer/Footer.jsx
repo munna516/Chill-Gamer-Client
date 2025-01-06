@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer className="footer footer-center bg-primary text-white rounded p-10">
+      <footer className="footer footer-center bg-primary text-white  p-10">
         <h1 className="text-4xl font-extrabold ">Chill-Gamer</h1>
         <nav className="grid grid-flow-col gap-4 text-lg">
           <Link to='/terms-conditions' className="link link-hover ">Terms & Condition</Link>

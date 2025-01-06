@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
+import React, {  useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { TiEdit } from "react-icons/ti";
 import { MdDelete } from "react-icons/md";
@@ -7,10 +6,11 @@ import Swal from "sweetalert2";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Space from "../Components/Space/Space";
+import useAuth from "../Hooks/useAuth";
 
 const MyReview = () => {
   AOS.init({ offset: 100 });
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth()
   const data = useLoaderData();
   const result = data.filter((review) => review.email === user?.email);
   const [myReview, setMyReview] = useState(result);
