@@ -7,7 +7,7 @@ const ReviewCard = ({ review }) => {
 
   return (
     <>
-      <Roll triggerOnce="true">
+      
         <div className="card card-compact bg-base-100 border-2 shadow-lg rounded-xl">
           <figure className="p-3">
             <img
@@ -40,7 +40,7 @@ const ReviewCard = ({ review }) => {
             </div>
           </div>
         </div>
-      </Roll>
+      
     </>
   );
 };

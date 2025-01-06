@@ -6,10 +6,8 @@ const Footer = () => {
       <footer className="footer footer-center bg-primary text-white rounded p-10">
         <h1 className="text-4xl font-extrabold ">Chill-Gamer</h1>
         <nav className="grid grid-flow-col gap-4 text-lg">
-          <Link  className="link link-hover ">
-            About us
-          </Link>
-          <Link to="/contact"  className="link link-hover ">
+          <Link to='/terms-conditions' className="link link-hover ">Terms & Condition</Link>
+          <Link to="/contact" className="link link-hover ">
             Contact
           </Link>
         </nav>

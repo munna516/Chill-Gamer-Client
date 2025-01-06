@@ -12,6 +12,7 @@ import GameWatchlist from "../Pages/GameWatchlist";
 import ReviewDetails from "../Pages/ReviewDetails";
 import UpdateReview from "../Pages/UpdateReview";
 import Contact from "../Pages/Contact";
+import TermsConditions from "../Pages/TermsConditions";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/terms-conditions",
+        element: <TermsConditions></TermsConditions>,
       },
       {
         path: "/login",
