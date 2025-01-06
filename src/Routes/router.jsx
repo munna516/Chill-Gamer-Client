@@ -11,6 +11,7 @@ import MyReview from "../Pages/MyReview";
 import GameWatchlist from "../Pages/GameWatchlist";
 import ReviewDetails from "../Pages/ReviewDetails";
 import UpdateReview from "../Pages/UpdateReview";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: "/reviews",
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`${import.meta.env.VITE_url}/reviews/${params.id}`),
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/login",

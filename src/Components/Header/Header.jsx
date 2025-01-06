@@ -32,7 +32,9 @@ const Header = () => {
       {/* Home */}
       <NavLink
         className={({ isActive }) =>
-          `lg:text-xl font-bold lg:hover:border-b-2  ${isActive ? "btn text-primary" : ""}`
+          `lg:text-xl font-bold lg:hover:border-b-2  ${
+            isActive ? "btn text-primary" : ""
+          }`
         }
         to="/"
       >
@@ -43,11 +45,23 @@ const Header = () => {
       {/* All Review */}
       <NavLink
         className={({ isActive }) =>
-          `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
+          `lg:text-xl lg:hover:border-b-2 font-bold ${
+            isActive ? "btn text-primary" : ""
+          }`
         }
         to="/reviews"
       >
         All Review
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          `lg:text-xl lg:hover:border-b-2 font-bold ${
+            isActive ? "btn text-primary" : ""
+          }`
+        }
+        to="/contact"
+      >
+        Contact
       </NavLink>
 
       {user && (
@@ -55,7 +69,9 @@ const Header = () => {
           {/* Add Review */}
           <NavLink
             className={({ isActive }) =>
-              `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
+              `lg:text-xl lg:hover:border-b-2 font-bold ${
+                isActive ? "btn text-primary" : ""
+              }`
             }
             to="/addReview"
           >
@@ -65,7 +81,9 @@ const Header = () => {
           {/* My Review */}
           <NavLink
             className={({ isActive }) =>
-              `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
+              `lg:text-xl lg:hover:border-b-2 font-bold ${
+                isActive ? "btn text-primary" : ""
+              }`
             }
             to="/myReviews"
           >
@@ -76,7 +94,9 @@ const Header = () => {
           {/* font-bold flex items-center gap-2 mr-5 */}
           <NavLink
             className={({ isActive }) =>
-              `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
+              `lg:text-xl lg:hover:border-b-2 font-bold ${
+                isActive ? "btn text-primary" : ""
+              }`
             }
             to="/myWatchlist"
           >
