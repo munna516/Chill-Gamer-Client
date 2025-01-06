@@ -53,7 +53,7 @@ const MyReview = () => {
         <table className="table ">
           {/* head */}
           <thead>
-            <tr className="text-blue-400 text-lg">
+            <tr className="text-primary text-lg">
               <th>Num</th>
               <th>Title</th>
               <th>Genre</th>
@@ -65,11 +65,11 @@ const MyReview = () => {
             {/* row 1 */}
             {myReview.map((review, index) => (
               <tr className="text-lg" key={index}>
-                <th>{index + 1}</th>
-                <td>{review.gameName}</td>
-                <td>{review.genre}</td>
-                <td>{review.rating} ☆</td>
-                <th className="flex gap-3 items-center text-xl">
+                <th className="text-cyan-500">{index + 1}</th>
+                <td className="text-cyan-500">{review.gameName}</td>
+                <td className="text-cyan-500">{review.genre}</td>
+                <td className="text-cyan-500">{review.rating} ☆</td>
+                <th className="flex gap-3 items-center  text-xl">
                   <Link
                     to={`/updateReview/${review._id}`}
                     className="text-purple-500"

@@ -9,8 +9,9 @@ const Home = () => {
     <div className="space-y-10 md:space-y-16 lg:space-y-24">
       <Banner></Banner>
       <HighestRatedGames></HighestRatedGames>
-      <LatestNews></LatestNews>
       <PlayStationGames></PlayStationGames>
+      <LatestNews></LatestNews>
+      
     </div>
   );
 };

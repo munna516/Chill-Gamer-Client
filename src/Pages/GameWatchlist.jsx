@@ -22,7 +22,7 @@ const GameWatchlist = () => {
         <table className="table ">
           {/* head */}
           <thead>
-            <tr className="text-blue-400 text-lg">
+            <tr className="text-primary text-lg">
               <th>Num</th>
               <th>Title</th>
               <th>Genre</th>
@@ -34,11 +34,11 @@ const GameWatchlist = () => {
             {/* row 1 */}
             {myWatchlist.map((watchlist, index) => (
               <tr className="text-lg" key={index}>
-                <th>{index + 1}</th>
-                <td>{watchlist.gameName}</td>
-                <td>{watchlist.genre}</td>
-                <td>{watchlist.publishingYear}</td>
-                <td>{watchlist.rating} ☆</td>
+                <th className="text-cyan-500">{index + 1}</th>
+                <td className="text-cyan-500">{watchlist.gameName}</td>
+                <td className="text-cyan-500">{watchlist.genre}</td>
+                <td className="text-cyan-500">{watchlist.publishingYear}</td>
+                <td className="text-cyan-500">{watchlist.rating} ☆</td>
               </tr>
             ))}
           </tbody>

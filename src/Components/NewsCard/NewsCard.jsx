@@ -5,16 +5,16 @@ const NewsCard = ({ news }) => {
     <>
       <Fade direction="right" triggerOnce="true">
         <div className="card md:card-side  bg-base-100 border-2">
-          <figure className="md:w-[30%] p-4">
+          <figure className="lg:w-[30%] p-4">
             <img
-              className="rounded-lg w-full h-40"
+              className="rounded-lg w-full md:h-[230px]"
               src={image_url}
               alt={title}
             />
           </figure>
-          <div className="card-body md:w-[70%] space-y-5 md:space-y-3">
+          <div className="card-body lg:w-[70%] space-y-1 md:space-y-3">
             <a
-              className="card-title md:text-2xl font-bold hover:text-accent hover:underline"
+              className="card-title text-primary text-lg md:text-2xl font-bold  hover:underline"
               href={web}
               target="_blank"
             >
@@ -30,7 +30,7 @@ const NewsCard = ({ news }) => {
                     </div>
                   </div>
                 </span>
-                <span className="text-xl font-semibold font-serif">
+                <span className="text-xl font-semibold text-cyan-400 font-serif">
                   {author?.name}
                 </span>
               </h1>

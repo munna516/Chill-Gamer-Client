@@ -64,8 +64,8 @@ const UpdateReview = () => {
 
   return (
     <>
-      <div className="bg-[#d8d0fb] my-10 p-5 md:p-20 rounded-lg">
-        <h1 className="text-4xl text-[#6442fc]  font-bold text-center mb-5">
+      <div className="p-5 md:p-20 rounded-lg">
+        <h1 className="text-4xl text-[#6442fc]  font-bold text-center mb-8">
           Update your review
         </h1>
         <form onSubmit={handleUpdateReview}>
