@@ -6,7 +6,7 @@ import Banner from "../Components/Banner/Banner";
 
 const Home = () => {
   return (
-    <div>
+    <div className="space-y-10 md:space-y-16 lg:space-y-24">
       <Banner></Banner>
       <HighestRatedGames></HighestRatedGames>
       <LatestNews></LatestNews>

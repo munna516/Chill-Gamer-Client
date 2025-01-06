@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Typewriter } from "react-simple-typewriter";
+import Space from "../Space/Space";
 
 const PlayStationGames = () => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const PlayStationGames = () => {
   };
   return (
     <div className="">
-      <h1 className="text-2xl md:text-4xl font-bold text-[#6442fc] text-center mt-20  mb-10">
+      <h1 className="text-2xl md:text-4xl font-bold text-primary text-center ">
         <Typewriter
           words={["Featured Play Station Games"]}
           loop={5}
@@ -49,7 +50,8 @@ const PlayStationGames = () => {
           delaySpeed={1000}
         />
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
+      <Space></Space>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ">
         {/* First Game */}
         <div className="card bg-base-100 image-full  shadow-xl">
           <figure>
@@ -170,6 +172,7 @@ const PlayStationGames = () => {
           </div>
         </div>
       </div>
+      <Space></Space>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const NewsCard = ({ news }) => {
           </figure>
           <div className="card-body md:w-[70%] space-y-5 md:space-y-3">
             <a
-              className="card-title md:text-2xl font-bold hover:text-purple-600 hover:underline"
+              className="card-title md:text-2xl font-bold hover:text-accent hover:underline"
               href={web}
               target="_blank"
             >

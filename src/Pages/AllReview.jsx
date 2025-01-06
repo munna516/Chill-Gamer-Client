@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import ReviewCard from "../Components/ReviewCard/ReviewCard";
+import Space from "../Components/Space/Space";
 
 const AllReview = () => {
   const allReview = useLoaderData();
@@ -45,8 +46,8 @@ const AllReview = () => {
   };
   return (
     <>
-      <div className="text-center mb-5 md:flex justify-evenly items-center">
-        <h1 className="text-2xl md:text-4xl font-bold text-[#6442fc]  my-10">
+      <div className="text-center mt-3 md:mt-8 lg:mt-14 md:flex justify-evenly items-center">
+        <h1 className="text-2xl md:text-4xl font-bold text-primary ">
           All Reviews ({reviews.length})
         </h1>
 
@@ -102,7 +103,7 @@ const AllReview = () => {
           </div>
         </div>
       </div>
-
+      <Space></Space>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 mb-10">
         {reviews.map((review) => (
           <ReviewCard key={review._id} review={review}></ReviewCard>

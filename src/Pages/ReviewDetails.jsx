@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Typewriter } from "react-simple-typewriter";
+import Space from "../Components/Space/Space";
 
 const ReviewDetails = () => {
   const { user } = useContext(AuthContext);
   const data = useLoaderData();
+  const navigate = useNavigate();
   const [isDisabled, setIsDisabled] = useState(false);
 
   const {
@@ -22,6 +24,9 @@ const ReviewDetails = () => {
   } = data;
 
   const handleWatchlist = () => {
+    if (!user && !user?.email) {
+      return navigate("/login");
+    }
     const name = user?.displayName;
     const email = user?.email;
     const watchlist = {
@@ -57,7 +62,7 @@ const ReviewDetails = () => {
 
   return (
     <>
-      <h1 className="text-2xl md:text-4xl font-bold text-[#6442fc] text-center my-10">
+      <h1 className="text-2xl md:text-4xl font-bold text-primary text-center my-10">
         Review Details of{" "}
         <Typewriter
           words={[gameName]}
@@ -69,27 +74,20 @@ const ReviewDetails = () => {
           delaySpeed={1000}
         />
       </h1>
-
-      <div className="card card-compact bg-base-100 border-2 mb-10 w-11/12 mx-auto shadow-xl">
-        <figure className="p-3">
+      <div className="lg:flex space-y-10 items-center lg:space-y-0 flex-col gap-5 lg:flex-row-reverse ">
+        <div className="lg:w-1/2">
           <img
             src={photo}
-            className="w-full h-[300px] md:h-[500px] rounded-lg"
-            alt={gameName}
+            className="w-full max-h-[450px] rounded-lg shadow-2xl"
           />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title text-xl md:text-3xl font-bold text-center justify-center">
+        </div>
+        <div className="lg:w-1/2">
+          <h1 className="sm:text-lg md:text-2xl lg:text-4xl font-bold text-primary">
             {gameName}
-          </h2>
-          <div className="text-center space-y-3 md:space-y-0 md:flex justify-between md:px-10 text-2xl font-medium my-5">
-            <h1>
-              Category : <span className="text-purple-600">{genre}</span>
-            </h1>
-            <h1>
-              Publish In :{" "}
-              <span className="text-purple-600">{publishingYear}</span>{" "}
-            </h1>
+          </h1>
+          <p className="py-6 text-gray-400">{description}</p>
+          <div className="flex items-center justify-between text-xl font-semibold text-cyan-400">
+            <h1>{genre}</h1>
             <h1 className="text-lg">
               <StarRatings
                 rating={parseInt(rating)}
@@ -101,17 +99,27 @@ const ReviewDetails = () => {
                 name="rating"
               />
             </h1>
+            <h1>{publishingYear}</h1>
           </div>
-          <div className="md:px-10  text-gray-400">
-            <p>{description}</p>
+          <div className="    my-5 ">
+            <h1 className="text-xl font-bold mb-3">Review Details : </h1>
+            <ol className="text-cyan-400 space-y-3">
+              <li>{name}</li>
+              <li>{email}</li>
+            </ol>
           </div>
-          <div className="text-center space-y-3 lg:space-y-0  lg:flex justify-between gap-3 items-center my-5 md:px-10">
-            <h1>
-              Reviewer Name : <span className="text-purple-600">{name}</span>{" "}
-            </h1>
-            <h1>
-              Reviewer Email : <span className="text-purple-600">{email}</span>{" "}
-            </h1>
+          <div className="flex justify-between items-center">
+            <button
+              onClick={() => navigate("/reviews")}
+              className="btn btn-primary"
+            >
+              Back
+            </button>
+
+            <Link to="/addReview" className="flex gap-5 items-center">
+              <button className="btn btn-primary">Review A Game</button>
+            </Link>
+
             <button
               onClick={handleWatchlist}
               disabled={isDisabled}
@@ -122,6 +130,7 @@ const ReviewDetails = () => {
           </div>
         </div>
       </div>
+      <Space></Space>
     </>
   );
 };

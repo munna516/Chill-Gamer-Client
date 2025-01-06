@@ -32,9 +32,7 @@ const Header = () => {
       {/* Home */}
       <NavLink
         className={({ isActive }) =>
-          `text-xl font-bold flex items-center gap-2 mr-5 ${
-            isActive ? "btn btn-primary text-white" : ""
-          }`
+          `lg:text-xl font-bold lg:hover:border-b-2  ${isActive ? "btn text-primary" : ""}`
         }
         to="/"
       >
@@ -45,9 +43,7 @@ const Header = () => {
       {/* All Review */}
       <NavLink
         className={({ isActive }) =>
-          `text-xl font-bold flex items-center gap-2 mr-5 ${
-            isActive ? "btn btn-primary text-white" : ""
-          }`
+          `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
         }
         to="/reviews"
       >
@@ -59,9 +55,7 @@ const Header = () => {
           {/* Add Review */}
           <NavLink
             className={({ isActive }) =>
-              `text-xl font-bold flex items-center gap-2 mr-5 ${
-                isActive ? "btn btn-primary text-white" : ""
-              }`
+              `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
             }
             to="/addReview"
           >
@@ -71,9 +65,7 @@ const Header = () => {
           {/* My Review */}
           <NavLink
             className={({ isActive }) =>
-              `text-xl font-bold flex items-center gap-2 mr-5 ${
-                isActive ? "btn btn-primary text-white" : ""
-              }`
+              `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
             }
             to="/myReviews"
           >
@@ -81,11 +73,10 @@ const Header = () => {
           </NavLink>
 
           {/* Game WWatchList */}
+          {/* font-bold flex items-center gap-2 mr-5 */}
           <NavLink
             className={({ isActive }) =>
-              `text-xl font-bold flex items-center gap-2 mr-5 ${
-                isActive ? "btn btn-primary text-white" : ""
-              }`
+              `lg:text-xl lg:hover:border-b-2 font-bold ${isActive ? "btn text-primary" : ""}`
             }
             to="/myWatchlist"
           >
@@ -97,7 +88,7 @@ const Header = () => {
   );
   return (
     <>
-      <div className="navbar rounded-b-lg bg-slate-300 fixed  py-3 z-50  top-0 lg:px-5">
+      <div className="navbar flex bg-primary  fixed text-white h-20 z-50 opacity-80 top-0 lg:px-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -118,20 +109,22 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu dropdown-content gap-3  bg-primary rounded-box z-10  w-52 p-3 "
             >
               {links}
             </ul>
           </div>
           <Link
             to="/"
-            className="flex gap-2 items-center text-lg md:text-2xl lg:text-4xl  font-extrabold"
+            className="flex gap-2 items-center justify-center sm:text-lg md:text-3xl lg:text-3xl  font-extrabold"
           >
             Chill-Gamer
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal  px-1">{links}</ul>
+          <ul className="menu menu-horizontal gap-5  items-center px-1">
+            {links}
+          </ul>
         </div>
         <div className="navbar-end gap-3">
           {user && user?.email ? (
@@ -159,8 +152,8 @@ const Header = () => {
             <>
               <NavLink
                 className={({ isActive }) =>
-                  `md:text-lg lg:text-xl font-bold btn ${
-                    isActive ? "btn btn-primary text-white" : ""
+                  `md:text-lg lg:text-xl font-bold mr-2  lg:mr-5 hover:border-b-2 ${
+                    isActive ? "btn text-primary" : ""
                   }`
                 }
                 to="/register"
@@ -169,8 +162,8 @@ const Header = () => {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `md:text-lg lg:text-xl font-bold btn ${
-                    isActive ? "btn btn-primary text-white" : ""
+                  `md:text-lg lg:text-xl font-bold mr-2 lg:mr-5 hover:border-b-2 ${
+                    isActive ? "btn text-primary" : ""
                   }`
                 }
                 to="/login"
@@ -180,7 +173,7 @@ const Header = () => {
             </>
           )}
 
-          <label className="swap swap-rotate">
+          <label className="swap swap-rotate ">
             {/* this hidden checkbox controls the state */}
             <input
               onChange={handleTheme}
@@ -191,7 +184,7 @@ const Header = () => {
 
             {/* sun icon */}
             <svg
-              className="swap-off h-10 w-10 fill-current"
+              className="swap-off h-10 w-7 lg:h-10 lg:w-10 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -200,7 +193,7 @@ const Header = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-on h-10 w-10 fill-current"
+              className="swap-on h-10 w-7 lg:h-10 lg:w-10 fill-current"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReviewCard from "../ReviewCard/ReviewCard";
 import { Typewriter } from "react-simple-typewriter";
+import Space from "../Space/Space";
 
 const HighestRatedGames = () => {
   const [highestRatedGame, setHighestRatedGames] = useState([]);
@@ -13,11 +14,11 @@ const HighestRatedGames = () => {
   }, []);
   return (
     <>
-      <div className="my-10">
-        <h1 className="text-2xl md:text-4xl font-bold text-center text-[#6442fc] mb-8">
+      <div >
+        <h1 className="text-2xl md:text-4xl font-bold text-center text-[#6442fc]">
           <Typewriter
-            words={["☆☆ Highest Rated Games ☆☆"]}
-            loop={5}
+            words={["☆ Highest Rated Games ☆"]}
+            loop={50}
             cursor
             cursorStyle="_"
             typeSpeed={70}
@@ -25,6 +26,7 @@ const HighestRatedGames = () => {
             delaySpeed={1000}
           />
         </h1>
+        <Space></Space>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {highestRatedGame.map((review) => (

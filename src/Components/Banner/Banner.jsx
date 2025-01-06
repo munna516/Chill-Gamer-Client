@@ -21,7 +21,7 @@ const Banner = () => {
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 2 }}
-      className=" px-6 py-10  "
+      className="mt-5 md:mt-8 lg:mt-14"
     >
       <Swiper
         spaceBetween={30}

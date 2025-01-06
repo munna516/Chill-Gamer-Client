@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Space from "../Components/Space/Space";
 
 const MyReview = () => {
   AOS.init({ offset: 100 });
@@ -44,11 +45,12 @@ const MyReview = () => {
   };
   return (
     <>
-      <h1 className="text-4xl font-bold text-[#6442fc] text-center my-10">
+      <h1 className="text-4xl font-bold text-primary text-center mt-3 md:mt-8 lg:mt-14">
         My Reviews({myReview.length})
       </h1>
+      <Space></Space>
       <div data-aos="fade-down" className="overflow-x-auto ">
-        <table className="table mb-10">
+        <table className="table ">
           {/* head */}
           <thead>
             <tr className="text-blue-400 text-lg">
@@ -86,6 +88,7 @@ const MyReview = () => {
           </tbody>
         </table>
       </div>
+      <Space></Space>
     </>
   );
 };
