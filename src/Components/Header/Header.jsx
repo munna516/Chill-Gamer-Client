@@ -97,7 +97,7 @@ const Header = () => {
   );
   return (
     <>
-      <div className="navbar rounded-b-lg bg-slate-300 fixed  py-5 z-50 w-11/12 top-0 mx-auto">
+      <div className="navbar rounded-b-lg bg-slate-300 fixed  py-3 z-50  top-0 lg:px-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -125,7 +125,7 @@ const Header = () => {
           </div>
           <Link
             to="/"
-            className="flex gap-2 items-center text-xl  lg:text-4xl  font-extrabold"
+            className="flex gap-2 items-center text-lg md:text-2xl lg:text-4xl  font-extrabold"
           >
             Chill-Gamer
           </Link>
@@ -159,7 +159,7 @@ const Header = () => {
             <>
               <NavLink
                 className={({ isActive }) =>
-                  `text-xl font-bold btn ${
+                  `md:text-lg lg:text-xl font-bold btn ${
                     isActive ? "btn btn-primary text-white" : ""
                   }`
                 }
@@ -169,7 +169,7 @@ const Header = () => {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  `text-xl font-bold btn ${
+                  `md:text-lg lg:text-xl font-bold btn ${
                     isActive ? "btn btn-primary text-white" : ""
                   }`
                 }

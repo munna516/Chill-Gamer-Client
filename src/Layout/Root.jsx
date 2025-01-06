@@ -8,7 +8,7 @@ const Root = () => {
     <>
       <div className="flex flex-col min-h-screen bg-base-200">
 
-        <div className="w-11/12 mx-auto my-3 mb-16">
+        <div className=" my-3 mb-16">
           <Header></Header>
         </div>
 
@@ -16,7 +16,7 @@ const Root = () => {
           <Outlet></Outlet>
         </div>
 
-        <div className="w-11/12 mx-auto">
+        <div className="">
           <Footer></Footer>
         </div>
         

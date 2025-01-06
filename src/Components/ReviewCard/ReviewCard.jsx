@@ -20,14 +20,14 @@ const ReviewCard = ({ review }) => {
             <h2 className="card-title font-bold text-xl">{gameName}</h2>
             <div className="flex justify-between items-center">
               <div className="text-lg">
-                <span className="font-semibold">Genre :</span>{" "}
+                <span className="font-semibold"></span>{" "}
                 <span className="text-purple-600 font-semibold">{genre} </span>
               </div>
               <div className="text-lg text-purple-600">
                 {rating} <span>★</span>
               </div>
               <div className="text-lg">
-                <span className="font-semibold ">Publish :</span>{" "}
+                <span className="font-semibold "></span>{" "}
                 <span className="text-purple-600 font-semibold">
                   {publishingYear}{" "}
                 </span>
